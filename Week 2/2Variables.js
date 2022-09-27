@@ -60,3 +60,4 @@ let input = "3.14";
 console.log(input + 2);
 //Here we are parsing to a number
 input = Number(input + 2);
+console.log(input + 2);
