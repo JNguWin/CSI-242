@@ -1,3 +1,4 @@
+//Reference vs Value ===============================================
 let text = "Hello"
 let text2 = text
 console.log(text);
@@ -30,4 +31,26 @@ console.log(person2);
 person2.firstName = "Mohamed";
 console.log(person);
 console.log(person2);
+
+
+
+
+//Loops============================================================
+let newArray = ["foo", "fooBar", "bar", "BarFoo"];
+//Forloop
+for(let i = 0; i < newArray.length; i++){
+    console.log("Index: " + i + " Element: " + newArray[i]);
+}
+
+//While
+let counter = 0;
+while(counter < newArray.length){
+    console.log("Index: " + counter + " Element: " + newArray[counter]);
+    counter++
+}
+
+//ForEach
+newArray.forEach((element, index) =>
+console.log("Index: " + index + " Element: " + element));
+
 
