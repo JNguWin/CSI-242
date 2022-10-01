@@ -114,29 +114,67 @@
 
 //Functions========================================================
 
-let input = prompt("Enter a number");
-while(input != Number){
-    input = prompt("Enter a number");
+// let input = prompt("Enter a number");
+// while(input != Number){
+//     input = prompt("Enter a number");
+// }
+// while(input == Number){
+//     if(input%2 == 0){
+//         console.log("userInput is even");
+//     }
+//     else if(input%3 == 0 || input == 1 || input == 0){
+//         console.log("userInput is odd");
+//     }
+// }
+
+
+// //Original
+// function getRndInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min)) + min
+// }
+
+// //Function Expression
+// let functionExpression = function(min, max){
+//     return Math.floor(Math.random() * (max - min)) + min
+// }
+
+// //Arrow function
+// let functionExpressions = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+
+let randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+
+
+let array = [randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99),
+    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99)];
+for(let i = 0; i < 25; i++){
+    console.log(array[i]);
 }
-while(input == Number){
-    if(input%2 == 0){
-        console.log("userInput is even");
+
+function sort(array){
+    for(let j = 0; j < array.length; j++){
+        
     }
-    else if(input%3 == 0 || input == 1 || input == 0){
-        console.log("userInput is odd");
-    }
 }
 
 
-//Original
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
-}
 
-//Function Expression
-let functionExpression = function(min, max){
-    return Math.floor(Math.random() * (max - min)) + min
-}
 
-//Arrow function
-let functionExpressions = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+// let correctInput = Number;
+// let input = "";
+// while(input != correctInput){
+//     input = prompt("Enter a number");
+//     if(input == correctInput){
+//         if(input % 2 == 0){
+//             console.log("Input is even")
+//         }
+//         else if(input % 3 == 0){
+//             console.log("Input is odd")
+//         }
+//     }
+// }
