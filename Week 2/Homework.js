@@ -142,39 +142,68 @@
 // let functionExpressions = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 
-let randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+// let randomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 
 
-let array = [randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99),
-    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
-    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
-    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
-    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
-    randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99)];
-for(let i = 0; i < 25; i++){
-    console.log(array[i]);
-}
-
-function sort(array){
-    for(let j = 0; j < array.length; j++){
-        
-    }
-}
+// let array = [randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99), randomNumber(0, 99),
+//     randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+//     randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+//     randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+//     randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99),
+//     randomNumber(0, 99),randomNumber(0, 99),randomNumber(0, 99)];
+// for(let i = 0; i < 25; i++){
+//     console.log(array[i]);
+// }
 
 
-
-
-// let correctInput = Number;
-// let input = "";
-// while(input != correctInput){
-//     input = prompt("Enter a number");
-//     if(input == correctInput){
-//         if(input % 2 == 0){
-//             console.log("Input is even")
-//         }
-//         else if(input % 3 == 0){
-//             console.log("Input is odd")
+// function sortFunction(array){
+//     let n = array.length;
+//     for(let j = 0; j < n - 1; j++){
+//         for(let k = 0; k < n - j - 1; k++){
+//             if(array[k] > array[k + 1]){
+//                 let temp = array[k];
+//                 array[k] = array[k + 1];
+//                 array[k + 1] = temp;
+//             }
 //         }
 //     }
 // }
+
+
+
+
+
+// Create a while loop to prompt the user for input.
+// The while loop should continue to prompt the user until they input a number
+// After you have verified that it is a number, print out:
+//  "userInput is even" if userInput is even, 
+//  "userInput is odd" if userInput is odd
+// let input;
+// do{
+//     input = prompt("Enter a number")
+// }while(input != parseInt(input) && input)
+// if(input % 2 == 0){
+//     console.log("Input is even")
+// }
+// else if(input % 3 == 0 || input == 1 || input ==0){
+//     console.log("Input is odd")
+// }
+
+
+
+// Repeat this process using a switch statement instead of if/else
+let input;
+do{
+    input = prompt("Enter a number")
+}while(input != parseInt(input) && input)
+switch(input % 2){
+    case 0:
+        console.log("Input is even");
+        break;
+    case 1:
+        console.log("Input is odd");
+        break;
+    default:
+        console.log("Invalid Input");         
+}
