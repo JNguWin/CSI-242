@@ -193,17 +193,28 @@
 
 
 // Repeat this process using a switch statement instead of if/else
-let input;
-do{
-    input = prompt("Enter a number")
-}while(input != parseInt(input) && input)
-switch(input % 2){
-    case 0:
-        console.log("Input is even");
-        break;
-    case 1:
-        console.log("Input is odd");
-        break;
-    default:
-        console.log("Invalid Input");         
+// let input;
+// do{
+//     input = prompt("Enter a number")
+// }while(input != parseInt(input) && input)
+// switch(input % 2){
+//     case 0:
+//         console.log("Input is even");
+//         break;
+//     case 1:
+//         console.log("Input is odd");
+//         break;
+//     default:
+//         console.log("Invalid Input");         
+// }
+
+let a;
+
+if(a){
+    console.log('true')
+}
+else{
+    console.log('false');
+
+
 }
