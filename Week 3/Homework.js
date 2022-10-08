@@ -101,12 +101,14 @@
 
 //splice the array above into two seperate arrays 
 //["f", "o", "o"] and ["b", "a", "r"]
-{
-    let names = ["f", "o", "o", "b", "a", "r"];
-    console.log(names)
-    let foo = names.splice(0, 3)
-    console.log(foo)
-    let bar = names.splice(0, 3)
-    console.log(bar)
+// {
+//     let names = ["f", "o", "o", "b", "a", "r"];
+//     console.log(names)
+//     let foo = names.splice(0, 3)
+//     console.log(foo)
+//     let bar = names.splice(0, 3)
+//     console.log(bar)
 
-}
+// }
+
+
