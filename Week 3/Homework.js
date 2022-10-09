@@ -1,9 +1,57 @@
+// Questions:
+
+//Scoping
+//console.log("================================Scoping=====================================")
+//1)
+//given the following code:
+//var x = 10;
+//what is the scope of x?
+//X is global scope
+
+// 2)
+// given the following code
+//let z = "Hello World";
+// what is the scope of z?
+//Z is global scope
+
+// 3)
+// given the following code
+// let f_3 = () => {
+//     var u = 16;
+// }
+//what is the scope of u? 
+//U is a function scope because it is in a function
+
+// 4)
+//given the following code
+// function f_4(){
+//     {
+//         window.v = 12;        
+//     }
+
+// }
+//what is the scope of window.v?
+//window.v is a block scope because even though it is in a function it is inside
+//another block
+
+// 5) 
+// given the following code
+// function f_5(){
+//     i = 12;
+// }
+//what is the scope of i?
+//i is a function scope because it is in a function
+
+
+// 6) 
+// given the following code
 // h = 1;
 // function f_6(){
 //     var h = 137
 // }
 // console.log(h)
-//h returns 1 in console
+//what is the result of h in the console?
+//h is 1, it didn't change because the function hasn't been called yet
 
 
 // h = 1;
@@ -35,8 +83,28 @@
 // console.log(u)
 // console.log(p)
 // console.log(pi)
+
+//what is the result of e in the console?
+//In console e returns as 2.71828
+
+//What is the scope of e?
+//e is a global scope because it's variable is undefined
+
+//what is the result of u in the console?
+//u returns 4.3 in the console
+
+//What is the scope of u?
+//u is a global scope because var cannot be a block scope
+
+//what is the result of pi to the console?
+//pi returns an undefined error
+
+//What is the scope of pi?
+//pi is a block scope because it is in a block and it is a let variable
 //No variable and var can be defined outside the block and be return
 //If it is let or const then it cannot be defined outside and cant be returned
+
+
 
 
 // function fy_10(){
@@ -53,9 +121,11 @@
 //     }
 //     return x + y;
 // }
-
-
 // console.log(fy_10())
+// What is the return value of x + y?
+//It returns 24. 
+
+
 
 
 // const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
@@ -119,7 +189,6 @@
 
 
 //splice the array above into two seperate arrays 
-//["f", "o", "o"] and ["b", "a", "r"]
 // {
 //     let names = ["f", "o", "o", "b", "a", "r"];
 //     console.log(names)
@@ -129,6 +198,23 @@
 //     console.log(bar)
 
 // }
+
+
+
+
+//14) Explain what is an object? What is a map?
+
+//Object - is a data type that is typically used to store keys and values such as 
+//firstName(key): "John"(value)
+//lastName(key): "Nguyen"(value)
+
+//Map - is another type of object that holds a pair of key and values
+//and can have another object as a key
+//Example:
+//let student = new map()
+//student.set("firstName, "John")
+
+
 
 
 
@@ -162,6 +248,7 @@
 //the [ token before title was unexpected
 
 // console.log(reminderList[1].details)
+
 
 
 
