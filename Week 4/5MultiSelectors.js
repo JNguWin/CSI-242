@@ -15,9 +15,9 @@ listArray.forEach(item => {
 })
 
 
-// //QuerySelectorAll - Uses CSS syntax to select multiple elements
-// const listItems3 = document.querySelectorAll('li')
-// console.log(listItems3)
-// listItems3.forEach(item => {
-//     console.log(item)
-// })
+//QuerySelectorAll - Uses CSS syntax to select multiple elements
+const listItems3 = document.querySelectorAll('li')
+console.log(listItems3)
+listItems3.forEach(item => {
+    console.log(item)
+})
