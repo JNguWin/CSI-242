@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
     email = document.getElementById("email")
     password = document.getElementById("password")
     password2 = document.getElementById("password2")
-
+    console.log(form)
     //Add an event listener to the form 
     form.addEventListener('submit', validateForm);
 
@@ -23,6 +23,7 @@ window.addEventListener('load', function(){
 function validateForm(event){
     //We can prevent the default behaviour of an event
     event.preventDefault();
+    console.log(event)
 
     //Call the checkRequired function
     //Checks if any if the inputs are blanked
@@ -37,7 +38,7 @@ function validateForm(event){
 function checkRequired(inputArray){
     //Go through the array and see if any of the inputs are empty
     inputArray.forEach(function(input){
-        if(input.value === ' '){
+        if(input.value === ''){
             //Display an error message
             //Instead of hardcoding the error message
             //Make a function that sets the error message
