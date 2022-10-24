@@ -42,6 +42,22 @@
 //     e. Append this new button to the body of the page.
 // */  
 
+    // let list;
+    // let btnAdd;
+    // let newIngredient;
+    // let newList;
+
+    // newIngredient = prompt('Ingredient to add?')
+    // btnAdd = document.getElementById("btn-add")
+    // btnAdd.addEventListener('click', addIngredient)
+
+    // function addIngredient(){
+    //     list = document.getElementById("shoppingList")
+    //     newList = document.createElement('li')
+    //     newList.innerHTML = newIngredient
+    //     list.appendChild(newList)
+    // }
+
 // console.log("===========================================Task 4========================================================");
 // /*
 //     Creating a clear button
@@ -65,6 +81,28 @@
 //     d. Verify that it works
 
 // */
+
+
+    let btnRemove;
+    let position;
+    
+    btnRemove = document.getElementById("btn-remove")
+    btnRemove.addEventListener('click', removeIngredient)
+
+    function removeIngredient(){
+        position = prompt('Index to remove?')
+        if(isNaN(postion)){
+            alert('Enter a number')
+            return;
+        }
+        else{
+            for(let i = 0; i < list.length; i++){
+                if(i == postion){
+                    list[i] = list[i + 1]
+                }
+            }
+        }
+    }
 
 // console.log("====================================Extra Credit==========================================");
 
