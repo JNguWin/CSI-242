@@ -47,16 +47,16 @@
     // let newIngredient;
     // let newList;
 
-    // newIngredient = prompt('Ingredient to add?')
-    // btnAdd = document.getElementById("btn-add")
-    // btnAdd.addEventListener('click', addIngredient)
+    newIngredient = prompt('Ingredient to add?')
+    btnAdd = document.getElementById("btn-add")
+    btnAdd.addEventListener('click', addIngredient)
 
-    // function addIngredient(){
-    //     list = document.getElementById("shoppingList")
-    //     newList = document.createElement('li')
-    //     newList.innerHTML = newIngredient
-    //     list.appendChild(newList)
-    // }
+    function addIngredient(){
+        list = document.getElementById("shoppingList")
+        newList = document.createElement('li')
+        newList.innerHTML = newIngredient
+        list.appendChild(newList)
+    }
 
 // console.log("===========================================Task 4========================================================");
 // /*
