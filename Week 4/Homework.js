@@ -36,23 +36,15 @@
 // */
 
 let unformattedPhoneNumber = "1 2-06 - (425 - 2 3-24)";
-function format(unformattedPhoneNumber){
-    let number = []
-    for(let i = 0; i < unformattedPhoneNumber.length; i++){
-        number += unformattedPhoneNumber[0] = '1'
-        number += unformattedPhoneNumber[1] = ' '
-        number += unformattedPhoneNumber[2] = '('
-        number += unformattedPhoneNumber[6] = ')'
-        number += unformattedPhoneNumber[7] = ' '
-        number += unformattedPhoneNumber[11] = ' '
-        number += unformattedPhoneNumber[12] = '-'
-        number += unformattedPhoneNumber[13] = ' '
+let formatTemplate = "x (xxx) xxx - xxxx" 
+//1) we set up a template of a phone number to the correct format.
 
-
-    }
-    return number
-}
-console.log(format(unformattedPhoneNumber))
+for(let i of unformattedPhoneNumber){ // runs through the string starting from the first character, in this case "1", " ", "2", "-".... so fourth...
+      if(parseInt(i) + 1) formatTemplate = formatTemplate.replace("x", i); 
+      // if it's a number, we replace the first instance of "x" with that number.
+      // if(number + 1) because if(0) = false. 
+  }
+console.log(formatTemplate);
 
 
 // console.log(format(unformattedPhoneNumber))
@@ -79,17 +71,38 @@ console.log(format(unformattedPhoneNumber))
 
 //Example 2
 //expected: 33
-// let equation = "(1 + 3) * ( 4 - (2 / 8) * (3 + 4)) + (4/5)"
-// let openingParenthesisIndex = 10;
-// let closingParenthesisIndex = getIndexOfMatchingParenthesis(openingParenthesisIndex, equation);
-// console.log(closingParenthesisIndex)
-// function getIndexOfMatchingParenthesis(openingParenthesisIndex, equation){
-//     let closingParenthesisIndex = 0;
-//     for(let i = openingParenthesisIndex; i < equation.length; i++){
-//         closingParenthesisIndex = equation.lastIndexOf(')')
-//     }
-//     return closingParenthesisIndex
-// }
+let equation = "(1 + 3) * ( 4 - (2 / 8) * (3 + 4)) + (4/5)"
+//         let openingParenthesisIndex = 10;
+//         let closingParenthesisIndex = getIndexOfMatchingParenthesis(openingParenthesisIndex, equation);
+//         console.log(closingParenthesisIndex)
+//         //expected: 33
+
+// So the algorithm would be:
+// If we loop over a "(", add one to counter
+// If we loop over a ")", subtract one from the counter.
+// If counter === 0, then we know we have matched all the pairs of braces
+
+let openingParenthesisIndex = 10;
+let closingParenthesisIndex = getIndexOfMatchingParenthesis(openingParenthesisIndex, equation);
+function getIndexOfMatchingParenthesis(index, equation){
+    let counter = 0;
+    for(var i = index; i < equation.length; i++){
+        //console.log(equation[i]);
+        switch(equation[i]){
+            case "(" : 
+                counter++;
+                break;
+            case ")" :
+                counter--;
+                break;
+        }
+        if(counter === 0){
+            break;
+        }
+    }
+    return i;
+}
+console.log(closingParenthesisIndex)
 
 
 
