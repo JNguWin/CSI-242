@@ -5,11 +5,13 @@ const btnDrawLine = document.getElementById("btn-draw-line")
 const btnDrawManyLines = document.getElementById("draw-many-lines")
 const btnClear = document.getElementById("clear")
 const btnDrawCircle = document.getElementById("draw-circle")
+const btnDrawAnimatedCircle = document.getElementById("draw-animated-circle")
 
 btnDrawLine.addEventListener('click', drawLine)
 btnClear.addEventListener('click', clear)
 btnDrawManyLines.addEventListener('click', drawManyLines)
 btnDrawCircle.addEventListener('click', drawCircle)
+btnDrawAnimatedCircle.addEventListener('click', drawAnimatedCircle)
 
 function drawLine(){
     //Begin the path
@@ -60,6 +62,23 @@ function drawCircle(){
     ctx.arc(x,y,radius,start,end)
     ctx.strokeStyle = '0000ff'
     ctx.stroke()
+}
+
+
+
+function Point(x,y){
+    this.x = x
+    this.y = y
+}
+function drawAnimatedCircle(){
+    let p1 = new Point(canvas.width/2, canvas.height/2)
+    //Determine dimensions of the canvas
+    let min = Math.min(canvas.width, canvas.height)
+    //p2
+    let p2 = new Point(p1.x, 50)
+    let radius = Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y))
+    //Ready to draw the line
+    
 }
 
 
